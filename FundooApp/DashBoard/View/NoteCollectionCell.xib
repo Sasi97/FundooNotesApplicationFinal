@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="noteCell" id="Cbk-0C-nSK" customClass="NoteCollectionCell" customModule="FundooApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ya5-Q8-NPO" customClass="ShadowedView" customModule="FundooApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dN-IC-SAX" customClass="ShadowedButton" customModule="FundooApp" customModuleProvider="target">
+                                <rect key="frame" x="305" y="86" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="1uu-ZO-hj1"/>
+                                    <constraint firstAttribute="width" constant="15" id="ruA-dX-Vfg"/>
+                                </constraints>
+                                <state key="normal" image="trash"/>
+                                <connections>
+                                    <action selector="deleteForever:" destination="Cbk-0C-nSK" eventType="touchUpInside" id="YCU-Wr-R3m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWZ-Sz-Krp">
+                                <rect key="frame" x="305" y="0.0" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="eRd-AD-RSh"/>
+                                    <constraint firstAttribute="height" constant="15" id="fun-yh-K3L"/>
+                                </constraints>
+                                <state key="normal" image="pin"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I8-TT-TZA">
+                                <rect key="frame" x="22" y="8" width="276" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-NE-8c3">
+                                <rect key="frame" x="22" y="40" width="276" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMp-Va-zA0" customClass="ShadowedView" customModule="FundooApp" customModuleProvider="target">
+                                <rect key="frame" x="22" y="69" width="276" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgT-u2-ifI" customClass="ShadowedButton" customModule="FundooApp" customModuleProvider="target">
+                                        <rect key="frame" x="244" y="0.0" width="32" height="28"/>
+                                        <state key="normal" image="dismiss"/>
+                                        <connections>
+                                            <action selector="onClickRemoveRemainder:" destination="Cbk-0C-nSK" eventType="touchUpInside" id="Jco-iZ-S4o"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hti-Wz-yuc">
+                                        <rect key="frame" x="12" y="4" width="224" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="224" id="yem-Uq-h69"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lgT-u2-ifI" firstAttribute="top" secondItem="SMp-Va-zA0" secondAttribute="top" id="C9e-lj-KYK"/>
+                                    <constraint firstAttribute="bottom" secondItem="lgT-u2-ifI" secondAttribute="bottom" id="FK3-MS-D5X"/>
+                                    <constraint firstItem="hti-Wz-yuc" firstAttribute="top" secondItem="SMp-Va-zA0" secondAttribute="top" constant="4" id="MJN-Mh-2Ci"/>
+                                    <constraint firstItem="hti-Wz-yuc" firstAttribute="centerY" secondItem="lgT-u2-ifI" secondAttribute="centerY" constant="4" id="Z1q-47-QxB"/>
+                                    <constraint firstItem="lgT-u2-ifI" firstAttribute="leading" secondItem="hti-Wz-yuc" secondAttribute="trailing" constant="8" id="f6m-RU-WCh"/>
+                                    <constraint firstAttribute="trailing" secondItem="lgT-u2-ifI" secondAttribute="trailing" id="wOq-iv-ogh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9dN-IC-SAX" secondAttribute="bottom" id="1je-te-VBG"/>
+                            <constraint firstItem="dKc-NE-8c3" firstAttribute="width" secondItem="ya5-Q8-NPO" secondAttribute="width" multiplier="276:320" id="2sp-Me-wXa"/>
+                            <constraint firstItem="dKc-NE-8c3" firstAttribute="height" secondItem="ya5-Q8-NPO" secondAttribute="height" multiplier="21:100" id="3p5-QB-4u0"/>
+                            <constraint firstAttribute="trailing" secondItem="9dN-IC-SAX" secondAttribute="trailing" id="6EU-OC-eYS"/>
+                            <constraint firstItem="SMp-Va-zA0" firstAttribute="top" secondItem="dKc-NE-8c3" secondAttribute="bottom" constant="8" symbolic="YES" id="IQb-f4-AWT"/>
+                            <constraint firstItem="SMp-Va-zA0" firstAttribute="width" secondItem="ya5-Q8-NPO" secondAttribute="width" multiplier="276:320" id="Nxc-5a-NvN"/>
+                            <constraint firstItem="SMp-Va-zA0" firstAttribute="leading" secondItem="dKc-NE-8c3" secondAttribute="leading" id="SQm-Ct-a8A"/>
+                            <constraint firstItem="dKc-NE-8c3" firstAttribute="leading" secondItem="9I8-TT-TZA" secondAttribute="leading" id="Srv-as-PcB"/>
+                            <constraint firstItem="WWZ-Sz-Krp" firstAttribute="top" secondItem="ya5-Q8-NPO" secondAttribute="top" id="e0v-Ex-f9Y"/>
+                            <constraint firstAttribute="trailing" secondItem="WWZ-Sz-Krp" secondAttribute="trailing" id="kzc-FK-kKY"/>
+                            <constraint firstItem="9I8-TT-TZA" firstAttribute="height" secondItem="ya5-Q8-NPO" secondAttribute="height" multiplier="21:100" id="lPK-gu-wR4"/>
+                            <constraint firstItem="9I8-TT-TZA" firstAttribute="centerX" secondItem="ya5-Q8-NPO" secondAttribute="centerX" id="miK-N2-tvd"/>
+                            <constraint firstItem="WWZ-Sz-Krp" firstAttribute="top" secondItem="ya5-Q8-NPO" secondAttribute="top" id="msy-bY-ca0"/>
+                            <constraint firstItem="9I8-TT-TZA" firstAttribute="width" secondItem="ya5-Q8-NPO" secondAttribute="width" multiplier="276:320" id="q92-NC-u69"/>
+                            <constraint firstItem="dKc-NE-8c3" firstAttribute="centerY" secondItem="ya5-Q8-NPO" secondAttribute="centerY" id="tQd-Pe-lKQ"/>
+                            <constraint firstItem="9I8-TT-TZA" firstAttribute="top" secondItem="ya5-Q8-NPO" secondAttribute="top" constant="8" id="xnA-fa-yKo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.89658188660000004" green="0.90158767979999999" blue="0.93167036800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ya5-Q8-NPO" secondAttribute="bottom" id="anU-VH-m0T"/>
+                <constraint firstItem="ya5-Q8-NPO" firstAttribute="top" secondItem="Cbk-0C-nSK" secondAttribute="top" id="eak-wn-F0E"/>
+                <constraint firstAttribute="trailing" secondItem="ya5-Q8-NPO" secondAttribute="trailing" id="p2Z-Hk-Hm8"/>
+                <constraint firstItem="ya5-Q8-NPO" firstAttribute="leading" secondItem="Cbk-0C-nSK" secondAttribute="leading" id="z1k-6f-z4S"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="4No-qb-Uxv"/>
+            <size key="customSize" width="1921" height="390"/>
+            <connections>
+                <outlet property="deleteForeverBtn" destination="9dN-IC-SAX" id="YDr-gY-yhZ"/>
+                <outlet property="descLbl" destination="dKc-NE-8c3" id="Y3s-Vj-Q3K"/>
+                <outlet property="noteCard" destination="ya5-Q8-NPO" id="Q2V-cY-gxU"/>
+                <outlet property="pinBtn" destination="WWZ-Sz-Krp" id="3Y9-Dj-Q7A"/>
+                <outlet property="remainderCard" destination="SMp-Va-zA0" id="iJa-qt-Fce"/>
+                <outlet property="remainderLbl" destination="hti-Wz-yuc" id="PaF-do-f32"/>
+                <outlet property="removeRemainder" destination="lgT-u2-ifI" id="GXX-W9-Uc7"/>
+                <outlet property="titleLbl" destination="9I8-TT-TZA" id="VqF-OU-qQy"/>
+            </connections>
+            <point key="canvasLocation" x="3039.130434782609" y="-505.24553571428567"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="dismiss" width="32" height="32"/>
+        <image name="pin" width="24" height="24"/>
+        <image name="trash" width="75" height="75"/>
+    </resources>
+</document>
